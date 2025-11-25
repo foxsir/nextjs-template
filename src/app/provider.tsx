@@ -3,7 +3,7 @@
 import * as React from "react";
 
 // 1. import `HeroUIProvider` component
-import {HeroUIProvider} from "@heroui/react";
+import {HeroUIProvider, ToastProvider} from "@heroui/react";
 import {ReactNode} from "react";
 
 export default function Provider({children}: { children: ReactNode }) {
@@ -11,6 +11,7 @@ export default function Provider({children}: { children: ReactNode }) {
   return (
     <HeroUIProvider>
       {children}
+      <ToastProvider />
     </HeroUIProvider>
   );
 }
